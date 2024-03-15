@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import OtpInput from './OtpInput'
 import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css';
+import 'react-toastify/dist/ReactToastify.css';
 import App from '../App';
 
 const PhoneLogin = () => {
@@ -35,12 +35,12 @@ const PhoneLogin = () => {
   }
 
   return (
-    <div>
+    <div className=''>
       <ToastContainer />
       {!showOtpInput ? (
       <form onSubmit={handlePhoneSubmit}>
-        <input className='  ' type="text" value={phoneno} placeholder="Enter Phone Number" onChange={handlePhoneNo} />
-        <button className='btn btn-warning' type='submit'>Submit</button>
+        <input className='form-control   ' type="text" value={phoneno} placeholder="Enter Phone Number" onChange={handlePhoneNo} />
+        <button className='btn  p-2 m-3 btn-primary' type='submit'>Submit</button>
       </form>
       ) : (
         <div>
